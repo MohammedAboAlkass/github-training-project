@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظرة عامة — لوحة تحكم جمعية الشمال للتنمية والتطوير المجتمعي</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f6f5f2">
+  <link rel="icon" type="image/png" href="../img/logo.png">
+  <script>(function(){try{var d=document.documentElement,t=localStorage.getItem('almel-admin-theme');if(t==='dark')d.classList.add('dark');if(localStorage.getItem('almel-admin-sb')==='1')d.classList.add('sb-collapsed');}catch(e){}})();</script>
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-page="index">
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="القائمة الجانبية"></aside>
+    <div class="main">
+      <header class="topbar" id="topbar"></header>
+      <main class="content" id="main" tabindex="-1">
+
+        <div class="page-head">
+          <div>
+            <p class="greet-date"><span class="material-symbols-outlined" aria-hidden="true">calendar_today</span><span id="greet-date"></span></p>
+            <h1 class="page-title" id="greet-title">مرحباً</h1>
+            <p class="page-sub">إليك ملخص أداء الجمعية وأحدث النشاطات خلال هذا الشهر.</p>
+          </div>
+          <div class="page-actions">
+            <a class="btn btn-secondary" href="reports.html"><span class="material-symbols-outlined" aria-hidden="true">bar_chart</span>تقرير الشهر</a>
+            <a class="btn btn-primary" href="projects.html#new"><span class="material-symbols-outlined" aria-hidden="true">add</span>مشروع جديد</a>
+          </div>
+        </div>
+
+        <section aria-label="المؤشرات الرئيسية"><div class="kpis" id="kpis"></div></section>
+
+        <div class="grid mt-24">
+          <section class="card xl-8" aria-labelledby="t-ben">
+            <div class="card-head bordered">
+              <div class="ch"><span class="ch-ico"><span class="material-symbols-outlined" aria-hidden="true">diversity_3</span></span><div><h2 class="card-title" id="t-ben">المستفيدون عبر الزمن</h2><p class="card-sub">آخر 12 شهراً — القيم بالآلاف</p></div></div>
+              <span class="pill pill-neutral no-dot">12 شهراً</span>
+            </div>
+            <div class="card-body">
+              <div class="row-between" style="flex-wrap:wrap;margin-bottom:16px">
+                <div class="chart-summary"><span class="big ltr" id="ben-total"></span><span id="ben-delta" class="row" style="gap:8px"></span></div>
+              </div>
+              <div id="ben-chart"></div>
+            </div>
+          </section>
+
+          <section class="card xl-4" aria-labelledby="t-gov">
+            <div class="card-head bordered"><div class="ch"><span class="ch-ico"><span class="material-symbols-outlined" aria-hidden="true">map</span></span><div><h2 class="card-title" id="t-gov">التوزيع حسب المحافظات</h2><p class="card-sub">محافظات قطاع غزة الخمس — مخطط توضيحي</p></div></div></div>
+            <div class="card-body">
+              <div class="seg" id="gov-seg" role="group" aria-label="المؤشر المعروض" style="display:flex">
+                <button type="button" data-value="beneficiaries" aria-pressed="true" style="flex:1;justify-content:center">المستفيدون</button>
+                <button type="button" data-value="points" aria-pressed="false" style="flex:1;justify-content:center">نقاط التوزيع</button>
+                <button type="button" data-value="projects" aria-pressed="false" style="flex:1;justify-content:center">المشاريع</button>
+              </div>
+              <div id="gov-widget" class="mt-16"></div>
+            </div>
+          </section>
+
+          <section class="card xl-7" aria-labelledby="t-proj">
+            <div class="card-head bordered">
+              <div class="ch"><span class="ch-ico"><span class="material-symbols-outlined" aria-hidden="true">folder_open</span></span><div><h2 class="card-title" id="t-proj">المشاريع النشطة</h2><p class="card-sub">المشاريع الجارية وحالة كل منها</p></div></div>
+              <a class="link" href="projects.html">كل المشاريع<span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></a>
+            </div>
+            <div class="card-body"><ul class="proj-list" id="proj-active"></ul></div>
+          </section>
+
+          <section class="card xl-5" aria-labelledby="t-feed">
+            <div class="card-head bordered">
+              <div class="ch"><span class="ch-ico"><span class="material-symbols-outlined" aria-hidden="true">history</span></span><div><h2 class="card-title" id="t-feed">آخر النشاطات</h2><p class="card-sub">سجل التحديثات في المنصة</p></div></div>
+            </div>
+            <div class="card-body">
+              <div id="feed-activity" role="region" aria-labelledby="t-feed" tabindex="0"></div>
+            </div>
+          </section>
+
+          <section class="card xl-8" aria-labelledby="t-msg">
+            <div class="card-head bordered">
+              <div class="ch"><span class="ch-ico"><span class="material-symbols-outlined" aria-hidden="true">inbox</span></span><div><h2 class="card-title" id="t-msg">أحدث الرسائل</h2><p class="card-sub">طلبات التواصل والتطوع الواردة</p></div></div>
+              <a class="link" href="messages.html">صندوق الرسائل<span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></a>
+            </div>
+            <div class="card-body" style="padding-top:8px"><ul id="latest-messages"></ul></div>
+          </section>
+
+          <section class="card xl-4" aria-labelledby="t-quick">
+            <div class="card-head bordered"><div class="ch"><span class="ch-ico"><span class="material-symbols-outlined" aria-hidden="true">bolt</span></span><div><h2 class="card-title" id="t-quick">إجراءات سريعة</h2><p class="card-sub">أكثر المهام استخداماً</p></div></div></div>
+            <div class="card-body">
+              <div class="quick">
+                <a href="projects.html#new"><span class="q-ico"><span class="material-symbols-outlined" aria-hidden="true">add_circle</span></span><span><strong>مشروع جديد</strong><span class="s">إضافة حملة أو برنامج</span></span></a>
+                <a href="news-edit.html"><span class="q-ico"><span class="material-symbols-outlined" aria-hidden="true">edit_square</span></span><span><strong>كتابة خبر</strong><span class="s">نشر أو جدولة</span></span></a>
+                <a href="gallery.html#upload"><span class="q-ico"><span class="material-symbols-outlined" aria-hidden="true">add_photo_alternate</span></span><span><strong>رفع صور</strong><span class="s">إلى معرض الميدان</span></span></a>
+                <a href="reports.html#export"><span class="q-ico"><span class="material-symbols-outlined" aria-hidden="true">download</span></span><span><strong>تصدير تقرير</strong><span class="s">CSV أو PDF</span></span></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+  <script src="js/admin-data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
